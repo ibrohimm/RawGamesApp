@@ -52,12 +52,28 @@
 		6A3C1A152AFCA6AA002DD789 /* RawGamesApp */ = {
 			isa = PBXGroup;
 			children = (
-				6A3C1A162AFCA6AA002DD789 /* AppDelegate.swift */,
-				6A3C1A1F2AFCA6AB002DD789 /* Assets.xcassets */,
-				6A3C1A212AFCA6AB002DD789 /* LaunchScreen.storyboard */,
-				6A3C1A242AFCA6AB002DD789 /* Info.plist */,
+				6AA9769E2AFCB16100BB5A14 /* AppDelegate */,
+				6AA9769F2AFCB16900BB5A14 /* Resources */,
 			);
 			path = RawGamesApp;
+			sourceTree = "<group>";
+		};
+		6AA9769E2AFCB16100BB5A14 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6A3C1A162AFCA6AA002DD789 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6AA9769F2AFCB16900BB5A14 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6A3C1A212AFCA6AB002DD789 /* LaunchScreen.storyboard */,
+				6A3C1A1F2AFCA6AB002DD789 /* Assets.xcassets */,
+				6A3C1A242AFCA6AB002DD789 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,7 +292,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CB6VC9Q2Z4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RawGamesApp/Info.plist;
+				INFOPLIST_FILE = RawGamesApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -305,7 +321,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CB6VC9Q2Z4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RawGamesApp/Info.plist;
+				INFOPLIST_FILE = RawGamesApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
