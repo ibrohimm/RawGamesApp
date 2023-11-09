@@ -10,6 +10,8 @@
 		6A3C1A172AFCA6AA002DD789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C1A162AFCA6AA002DD789 /* AppDelegate.swift */; };
 		6A3C1A202AFCA6AB002DD789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C1A1F2AFCA6AB002DD789 /* Assets.xcassets */; };
 		6A3C1A232AFCA6AB002DD789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C1A212AFCA6AB002DD789 /* LaunchScreen.storyboard */; };
+		6AA976DE2AFCE56200BB5A14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AA976DD2AFCE56200BB5A14 /* Localizable.strings */; };
+		6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976E72AFCEC3200BB5A14 /* LocalizationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		6A3C1A222AFCA6AB002DD789 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A3C1A242AFCA6AB002DD789 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AA976992AFCA9EB00BB5A14 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6AA976DD2AFCE56200BB5A14 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		6AA976E72AFCEC3200BB5A14 /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,11 +73,21 @@
 		6AA9769F2AFCB16900BB5A14 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6AA976E62AFCEC1C00BB5A14 /* Localization */,
 				6A3C1A212AFCA6AB002DD789 /* LaunchScreen.storyboard */,
 				6A3C1A1F2AFCA6AB002DD789 /* Assets.xcassets */,
 				6A3C1A242AFCA6AB002DD789 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		6AA976E62AFCEC1C00BB5A14 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				6AA976E72AFCEC3200BB5A14 /* LocalizationHelper.swift */,
+				6AA976DD2AFCE56200BB5A14 /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A3C1A232AFCA6AB002DD789 /* LaunchScreen.storyboard in Resources */,
+				6AA976DE2AFCE56200BB5A14 /* Localizable.strings in Resources */,
 				6A3C1A202AFCA6AB002DD789 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A3C1A172AFCA6AA002DD789 /* AppDelegate.swift in Sources */,
+				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +185,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -232,6 +249,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -295,7 +313,6 @@
 				INFOPLIST_FILE = RawGamesApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
@@ -324,7 +341,6 @@
 				INFOPLIST_FILE = RawGamesApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
