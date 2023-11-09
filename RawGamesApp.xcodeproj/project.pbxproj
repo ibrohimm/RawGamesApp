@@ -12,6 +12,8 @@
 		6A3C1A232AFCA6AB002DD789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C1A212AFCA6AB002DD789 /* LaunchScreen.storyboard */; };
 		6AA976DE2AFCE56200BB5A14 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6AA976DD2AFCE56200BB5A14 /* Localizable.strings */; };
 		6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976E72AFCEC3200BB5A14 /* LocalizationHelper.swift */; };
+		6AA976ED2AFCF14700BB5A14 /* TabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976EB2AFCF14700BB5A14 /* TabBarItemType.swift */; };
+		6AA976EE2AFCF14700BB5A14 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976EC2AFCF14700BB5A14 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		6AA976992AFCA9EB00BB5A14 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6AA976DD2AFCE56200BB5A14 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6AA976E72AFCEC3200BB5A14 /* LocalizationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizationHelper.swift; sourceTree = "<group>"; };
+		6AA976EB2AFCF14700BB5A14 /* TabBarItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
+		6AA976EC2AFCF14700BB5A14 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA9769E2AFCB16100BB5A14 /* AppDelegate */,
+				6AA976E92AFCF13100BB5A14 /* Modules */,
 				6AA9769F2AFCB16900BB5A14 /* Resources */,
 			);
 			path = RawGamesApp;
@@ -88,6 +93,23 @@
 				6AA976DD2AFCE56200BB5A14 /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		6AA976E92AFCF13100BB5A14 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6AA976EA2AFCF13F00BB5A14 /* TabBar */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6AA976EA2AFCF13F00BB5A14 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6AA976EC2AFCF14700BB5A14 /* TabBarController.swift */,
+				6AA976EB2AFCF14700BB5A14 /* TabBarItemType.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +183,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AA976ED2AFCF14700BB5A14 /* TabBarItemType.swift in Sources */,
+				6AA976EE2AFCF14700BB5A14 /* TabBarController.swift in Sources */,
 				6A3C1A172AFCA6AA002DD789 /* AppDelegate.swift in Sources */,
 				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
 			);
