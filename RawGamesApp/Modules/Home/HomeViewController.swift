@@ -10,6 +10,7 @@ import UIKit
 final class HomeViewController: UIViewController, HomeViewInput {
     
     private var presenter: HomeViewOutput?
+    private let searchBar = UISearchBar(frame: .zero)
     
     // MARK: - Life Cycle
     
@@ -33,12 +34,37 @@ final class HomeViewController: UIViewController, HomeViewInput {
     }
 }
 
+// MARK: -
+extension HomeViewController: UISearchBarDelegate, UIScrollViewDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        
+    }
+}
+
 // MARK: - UI Setup
 
 extension HomeViewController {
     private func setupUI() {
         view.backgroundColor = .appColor(.primaryBackground)
+        createSearchView()
         
+    }
+    
+    private func createSearchView() {
+        searchBar.delegate = self
+        searchBar.setCustomSetting()
+        
+        view.addSubview(searchBar)
+        NSLayoutConstraint.activate([
+            searchBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            searchBar.heightAnchor.constraint(equalToConstant: 33)
+        ])
     }
     
 }
