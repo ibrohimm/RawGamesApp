@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		285DA1BE94E0857C8415BB05 /* Pods_RawGamesApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */; };
 		6A3C1A172AFCA6AA002DD789 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A3C1A162AFCA6AA002DD789 /* AppDelegate.swift */; };
 		6A3C1A202AFCA6AB002DD789 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C1A1F2AFCA6AB002DD789 /* Assets.xcassets */; };
 		6A3C1A232AFCA6AB002DD789 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A3C1A212AFCA6AB002DD789 /* LaunchScreen.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		37CB20775FF319F8660319C3 /* Pods-RawGamesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.release.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.release.xcconfig"; sourceTree = "<group>"; };
 		6A3C1A132AFCA6AA002DD789 /* RawGamesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RawGamesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3C1A162AFCA6AA002DD789 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A3C1A1F2AFCA6AB002DD789 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -29,6 +31,8 @@
 		6AA976EB2AFCF14700BB5A14 /* TabBarItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
 		6AA976EC2AFCF14700BB5A14 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6AA9771A2AFF586B00BB5A14 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,18 +40,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				285DA1BE94E0857C8415BB05 /* Pods_RawGamesApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EA147035E70CF9934E507F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6A3C1A0A2AFCA6AA002DD789 = {
 			isa = PBXGroup;
 			children = (
 				6AA976992AFCA9EB00BB5A14 /* README.md */,
 				6A3C1A152AFCA6AA002DD789 /* RawGamesApp */,
 				6A3C1A142AFCA6AA002DD789 /* Products */,
+				8D99510E23041BC461053E8B /* Pods */,
+				2EA147035E70CF9934E507F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +138,16 @@
 			path = "Api Service";
 			sourceTree = "<group>";
 		};
+		8D99510E23041BC461053E8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */,
+				37CB20775FF319F8660319C3 /* Pods-RawGamesApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -130,6 +155,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6A3C1A272AFCA6AB002DD789 /* Build configuration list for PBXNativeTarget "RawGamesApp" */;
 			buildPhases = (
+				259AA4615048A57B664D2F8B /* [CP] Check Pods Manifest.lock */,
 				6A3C1A0F2AFCA6AA002DD789 /* Sources */,
 				6A3C1A102AFCA6AA002DD789 /* Frameworks */,
 				6A3C1A112AFCA6AA002DD789 /* Resources */,
@@ -188,6 +214,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		259AA4615048A57B664D2F8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RawGamesApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6A3C1A0F2AFCA6AA002DD789 /* Sources */ = {
@@ -339,6 +390,7 @@
 		};
 		6A3C1A282AFCA6AB002DD789 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -367,6 +419,7 @@
 		};
 		6A3C1A292AFCA6AB002DD789 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37CB20775FF319F8660319C3 /* Pods-RawGamesApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
