@@ -11,6 +11,7 @@ final class HomeViewController: UIViewController, HomeViewInput {
     
     private var presenter: HomeViewOutput?
     private let searchBar = UISearchBar(frame: .zero)
+    private let tableView = UITableView(frame: .zero, style: .plain)
     
     // MARK: - Life Cycle
     
@@ -29,12 +30,10 @@ final class HomeViewController: UIViewController, HomeViewInput {
     // MARK: - View Input
     
     func setup(with viewModel: HomeViewModel) {
-        title = "RAWG"
         
     }
 }
 
-// MARK: -
 extension HomeViewController: UISearchBarDelegate, UIScrollViewDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         
@@ -45,13 +44,26 @@ extension HomeViewController: UISearchBarDelegate, UIScrollViewDelegate {
     }
 }
 
-// MARK: - UI Setup
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 0 }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        UITableViewCell()
+    }
+}
 
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+}
+
+// MARK: - UI Setup
 extension HomeViewController {
     private func setupUI() {
         view.backgroundColor = .appColor(.primaryBackground)
         createSearchView()
-        
+        createTableView()
     }
     
     private func createSearchView() {
@@ -67,4 +79,24 @@ extension HomeViewController {
         ])
     }
     
+    private func createTableView() {
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .singleLine
+        tableView.rowHeight = 100
+        tableView.layer.cornerRadius = 12
+        tableView.layer.masksToBounds = true
+        tableView.showsVerticalScrollIndicator = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+
 }
