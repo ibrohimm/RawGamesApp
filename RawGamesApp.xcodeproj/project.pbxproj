@@ -19,6 +19,7 @@
 		6AA9771D2AFF624600BB5A14 /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9771C2AFF624600BB5A14 /* AlamofireHTTPClient.swift */; };
 		6AA977202AFF89EC00BB5A14 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9771F2AFF89EC00BB5A14 /* APIError.swift */; };
 		6AA977222AFF8D8200BB5A14 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977212AFF8D8200BB5A14 /* HTTPMethod.swift */; };
+		6AA977242AFF8E1B00BB5A14 /* URLRequest+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977232AFF8E1B00BB5A14 /* URLRequest+Init.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		6AA9771C2AFF624600BB5A14 /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
 		6AA9771F2AFF89EC00BB5A14 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		6AA977212AFF8D8200BB5A14 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		6AA977232AFF8E1B00BB5A14 /* URLRequest+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Init.swift"; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -151,6 +153,7 @@
 			children = (
 				6AA9771F2AFF89EC00BB5A14 /* APIError.swift */,
 				6AA977212AFF8D8200BB5A14 /* HTTPMethod.swift */,
+				6AA977232AFF8E1B00BB5A14 /* URLRequest+Init.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AA977242AFF8E1B00BB5A14 /* URLRequest+Init.swift in Sources */,
 				6AA976ED2AFCF14700BB5A14 /* TabBarItemType.swift in Sources */,
 				6AA9771B2AFF586B00BB5A14 /* HTTPClient.swift in Sources */,
 				6AA976EE2AFCF14700BB5A14 /* TabBarController.swift in Sources */,
