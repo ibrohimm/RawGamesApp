@@ -16,6 +16,7 @@
 		6AA976ED2AFCF14700BB5A14 /* TabBarItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976EB2AFCF14700BB5A14 /* TabBarItemType.swift */; };
 		6AA976EE2AFCF14700BB5A14 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976EC2AFCF14700BB5A14 /* TabBarController.swift */; };
 		6AA9771B2AFF586B00BB5A14 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9771A2AFF586B00BB5A14 /* HTTPClient.swift */; };
+		6AA9771D2AFF624600BB5A14 /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9771C2AFF624600BB5A14 /* AlamofireHTTPClient.swift */; };
 		6AA977202AFF89EC00BB5A14 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9771F2AFF89EC00BB5A14 /* APIError.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		6AA976EB2AFCF14700BB5A14 /* TabBarItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarItemType.swift; sourceTree = "<group>"; };
 		6AA976EC2AFCF14700BB5A14 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6AA9771A2AFF586B00BB5A14 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		6AA9771C2AFF624600BB5A14 /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
 		6AA9771F2AFF89EC00BB5A14 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +139,7 @@
 			children = (
 				6AA9771E2AFF89C000BB5A14 /* Helper */,
 				6AA9771A2AFF586B00BB5A14 /* HTTPClient.swift */,
+				6AA9771C2AFF624600BB5A14 /* AlamofireHTTPClient.swift */,
 			);
 			path = "Api Service";
 			sourceTree = "<group>";
@@ -155,7 +158,6 @@
 				943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */,
 				37CB20775FF319F8660319C3 /* Pods-RawGamesApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -279,6 +281,7 @@
 				6AA976EE2AFCF14700BB5A14 /* TabBarController.swift in Sources */,
 				6A3C1A172AFCA6AA002DD789 /* AppDelegate.swift in Sources */,
 				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
+				6AA9771D2AFF624600BB5A14 /* AlamofireHTTPClient.swift in Sources */,
 				6AA977202AFF89EC00BB5A14 /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +430,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CB6VC9Q2Z4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RawGamesApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -456,6 +460,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = CB6VC9Q2Z4;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RawGamesApp/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

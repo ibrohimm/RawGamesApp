@@ -8,7 +8,7 @@
 import Foundation
 
 public protocol HTTPClient {
-    typealias Result = Swift.Result<Data, Error>
+    typealias Result = Swift.Result<Data, APIError>
     
     /// The completion handler can be invoked in any thread.
     /// Client are responsible to dispatch to appropriate thread, if needed.
