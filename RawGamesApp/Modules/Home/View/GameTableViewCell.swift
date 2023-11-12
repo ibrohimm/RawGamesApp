@@ -56,7 +56,7 @@ final class GameTableViewCell: BaseTableViewCell {
         genres.text = viewModel.genres
         progressView.progress = viewModel.metacritic
         progressLabel.text = viewModel.rating
-//        image.setImage(with: viewModel.image, placeholder: nil)
+        image.setImage(with: viewModel.image)
     }
     
     override func setupView() {
