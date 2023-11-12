@@ -45,4 +45,5 @@ protocol HomeInteractorOutput: AnyObject {
 // MARK: - Router
 
 protocol HomeRouterInput: AnyObject {
+    func navigateToGameDetails(with id: Int)
 }

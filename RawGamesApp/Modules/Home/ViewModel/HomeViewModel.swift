@@ -8,6 +8,7 @@
 import Foundation
 
 struct HomeViewModel {
+    let id: Int
     let name: String
     let image: String
     let metacritic: Float
@@ -15,6 +16,7 @@ struct HomeViewModel {
     let genres: String
     
     init(game: Game) {
+        self.id = game.id
         self.name = game.name
         self.image = game.backgroundImage
         self.metacritic = Float(game.metacriticRating)/100

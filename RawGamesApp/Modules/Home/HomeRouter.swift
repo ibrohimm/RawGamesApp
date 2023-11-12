@@ -14,4 +14,10 @@ final class HomeRouter: HomeRouterInput {
     init(viewController: UIViewController) {
         self.viewController = viewController
     }
+    
+    // MARK: - Router Input
+    
+    func navigateToGameDetails(with id: Int) {
+        
+    }
 }
