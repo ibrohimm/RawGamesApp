@@ -16,9 +16,9 @@ enum TabBarItemType: Int {
         let new: String
         switch self {
         case .home:
-            new = "Home"
+            new = "HOME"
         case .favorite:
-            new = "Favorite"
+            new = "FAVORITE"
         case .unknown:
             new = "Unknown"
         }
