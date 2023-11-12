@@ -41,7 +41,7 @@ final class HomeInteractor: HomeInteractorInput {
                     let mapper = try HomeMapper.map(data)
                     self?.games.append(contentsOf: mapper.list)
                     self?.nextPageURL = mapper.nextPage
-                    self?.presenter?.didFetchGames(with: self?.games ?? [])
+                    self?.presenter?.didFetchGames(with: mapper.list)
                 } catch let error {
                     self?.presenter?.didFetchFailed(error: error)
                 }
@@ -55,6 +55,7 @@ final class HomeInteractor: HomeInteractorInput {
         if index == getGamesList().count - 3 && nextPageURL != nil {
             guard !isFetchInProgress else { return }
             isFetchInProgress = true
+            presenter?.showLoadMoreLoading()
             loadData()
         }
     }

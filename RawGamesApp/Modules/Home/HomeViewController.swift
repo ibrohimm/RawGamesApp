@@ -12,6 +12,7 @@ final class HomeViewController: UIViewController, HomeViewInput {
     private var presenter: HomeViewOutput?
     private let searchBar = UISearchBar(frame: .zero)
     private let tableView = UITableView(frame: .zero, style: .plain)
+    private var paginationIndicator = UIActivityIndicatorView(style: .white)
     
     // MARK: - Life Cycle
     
@@ -35,6 +36,14 @@ final class HomeViewController: UIViewController, HomeViewInput {
     
     func displayError(message: String) {
         
+    }
+    
+    func showLoader() {
+        paginationIndicator.startAnimating()
+    }
+    
+    func hideLoader() {
+        paginationIndicator.stopAnimating()
     }
 }
 
@@ -100,6 +109,7 @@ extension HomeViewController {
         tableView.layer.masksToBounds = true
         tableView.showsVerticalScrollIndicator = false
         tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.tableFooterView = createFooterView()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(GameTableViewCell.self)
@@ -113,4 +123,21 @@ extension HomeViewController {
         ])
     }
 
+    fileprivate func createFooterView() -> UIView {
+        lazy var footer = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.width, height: 50))
+        footer.backgroundColor = .clear
+        
+        paginationIndicator.color = .gray
+        paginationIndicator.translatesAutoresizingMaskIntoConstraints = false
+        
+        footer.addSubview(paginationIndicator)
+        NSLayoutConstraint.activate([
+            paginationIndicator.centerYAnchor.constraint(equalTo: footer.centerYAnchor),
+            paginationIndicator.centerXAnchor.constraint(equalTo: footer.centerXAnchor),
+            paginationIndicator.widthAnchor.constraint(equalToConstant: 40),
+            paginationIndicator.heightAnchor.constraint(equalToConstant: 40)
+        ])
+        
+        return footer
+    }
 }

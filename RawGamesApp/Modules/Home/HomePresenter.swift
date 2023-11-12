@@ -26,6 +26,7 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
     // MARK: - View Output
     
     func viewDidLoad() {
+        view?.showLoader()
         interactor.loadData()
     }
     
@@ -42,12 +43,18 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
     // MARK: - Interactor Output
     
     func didFetchGames(with games: [Game]) {
-        homeViewModels = games.map { HomeViewModel(game: $0) }
+        homeViewModels += games.map { HomeViewModel(game: $0) }
+        view?.hideLoader()
         view?.reloadTableView()
     }
     
     func didFetchFailed(error: Error) {
+        view?.hideLoader()
         view?.displayError(message: error.localizedDescription)
+    }
+    
+    func showLoadMoreLoading() {
+        view?.showLoader()
     }
     
 }

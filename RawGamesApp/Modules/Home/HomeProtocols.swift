@@ -11,7 +11,8 @@
 protocol HomeViewInput: AnyObject {
     func reloadTableView()
     func displayError(message: String)
-    
+    func showLoader()
+    func hideLoader()
 }
 
 // MARK: Output
@@ -34,6 +35,7 @@ protocol HomeInteractorInput: AnyObject {
 protocol HomeInteractorOutput: AnyObject {
     func didFetchGames(with games: [Game])
     func didFetchFailed(error: Error)
+    func showLoadMoreLoading()
 }
 
 // MARK: - Router
