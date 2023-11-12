@@ -49,11 +49,20 @@ final class HomeViewController: UIViewController, HomeViewInput {
 
 extension HomeViewController: UISearchBarDelegate, UIScrollViewDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        
+        presenter?.search(with: searchText)
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
+        presenter?.search(with: searchBar.text ?? "")
+        hideSearchKeyboard()
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if scrollView == tableView { hideSearchKeyboard() }
+    }
+    
+    fileprivate func hideSearchKeyboard() {
+        searchBar.resignFirstResponder()
     }
 }
 

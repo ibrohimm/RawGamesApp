@@ -12,6 +12,7 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
     private let router: HomeRouterInput
     
     private var homeViewModels: [HomeViewModel] = []
+    private var searchViewModels: [HomeViewModel] = []
     
     // MARK: - Init
     
@@ -30,14 +31,20 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
         interactor.loadData()
     }
     
-    func numberOfGames() -> Int { homeViewModels.count }
+    func numberOfGames() -> Int {
+        interactor.getIsSearch() ? searchViewModels.count : homeViewModels.count
+    }
     
     func homeViewModel(at index: Int) -> HomeViewModel {
-        homeViewModels[index]
+        interactor.getIsSearch() ? searchViewModels[index] : homeViewModels[index]
     }
     
     func startPaginition(for index: Int) {
         interactor.loadMore(with: index)
+    }
+    
+    func search(with query: String) {
+        interactor.search(with: query)
     }
     
     // MARK: - Interactor Output
@@ -55,6 +62,16 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
     
     func showLoadMoreLoading() {
         view?.showLoader()
+    }
+    
+    func didFetchSearch(with games: [Game], isInitial: Bool) {
+        if isInitial {
+            searchViewModels = games.map { HomeViewModel(game: $0) }
+        } else {
+            searchViewModels += games.map { HomeViewModel(game: $0) }
+        }
+        view?.hideLoader()
+        view?.reloadTableView()
     }
     
 }

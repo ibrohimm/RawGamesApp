@@ -21,6 +21,7 @@ protocol HomeViewOutput: AnyObject {
     func numberOfGames() -> Int
     func homeViewModel(at index: Int) -> HomeViewModel
     func startPaginition(for: Int)
+    func search(with query: String)
 }
 
 // MARK: - Interactor
@@ -29,6 +30,8 @@ protocol HomeViewOutput: AnyObject {
 protocol HomeInteractorInput: AnyObject {
     func loadData()
     func loadMore(with index: Int)
+    func search(with query: String)
+    func getIsSearch() -> Bool
 }
 
 // MARK: Output
@@ -36,6 +39,7 @@ protocol HomeInteractorOutput: AnyObject {
     func didFetchGames(with games: [Game])
     func didFetchFailed(error: Error)
     func showLoadMoreLoading()
+    func didFetchSearch(with games: [Game], isInitial: Bool)
 }
 
 // MARK: - Router
