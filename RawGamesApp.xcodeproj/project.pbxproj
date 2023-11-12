@@ -22,7 +22,6 @@
 		6AA977022AFD037200BB5A14 /* HomeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976FA2AFD037200BB5A14 /* HomeBuilder.swift */; };
 		6AA977032AFD037200BB5A14 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976FB2AFD037200BB5A14 /* HomeInteractor.swift */; };
 		6AA977042AFD037200BB5A14 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976FC2AFD037200BB5A14 /* HomeViewModel.swift */; };
-		6AA977052AFD037200BB5A14 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA976FD2AFD037200BB5A14 /* HomeEntity.swift */; };
 		6AA9770D2AFE3AE900BB5A14 /* UISearchBar+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9770C2AFE3AE900BB5A14 /* UISearchBar+Extension.swift */; };
 		6AA977102AFE3BB500BB5A14 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AA9770F2AFE3BB500BB5A14 /* Color.xcassets */; };
 		6AA977122AFE3BEA00BB5A14 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977112AFE3BEA00BB5A14 /* UIColor.swift */; };
@@ -40,6 +39,8 @@
 		6AA977452B00C9D000BB5A14 /* Endpoint+toURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977442B00C9D000BB5A14 /* Endpoint+toURL.swift */; };
 		6AA977492B00CC2400BB5A14 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977482B00CC2400BB5A14 /* GameModel.swift */; };
 		6AA9774D2B00D38A00BB5A14 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9774C2B00D38A00BB5A14 /* Game.swift */; };
+		6AA977502B00D55400BB5A14 /* HomeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9774F2B00D55400BB5A14 /* HomeMapper.swift */; };
+		6AA977522B00DE7000BB5A14 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977512B00DE7000BB5A14 /* HomeEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,7 +62,6 @@
 		6AA976FA2AFD037200BB5A14 /* HomeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeBuilder.swift; sourceTree = "<group>"; };
 		6AA976FB2AFD037200BB5A14 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
 		6AA976FC2AFD037200BB5A14 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		6AA976FD2AFD037200BB5A14 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		6AA9770C2AFE3AE900BB5A14 /* UISearchBar+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISearchBar+Extension.swift"; sourceTree = "<group>"; };
 		6AA9770F2AFE3BB500BB5A14 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		6AA977112AFE3BEA00BB5A14 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -79,6 +79,8 @@
 		6AA977442B00C9D000BB5A14 /* Endpoint+toURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+toURL.swift"; sourceTree = "<group>"; };
 		6AA977482B00CC2400BB5A14 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		6AA9774C2B00D38A00BB5A14 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		6AA9774F2B00D55400BB5A14 /* HomeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapper.swift; sourceTree = "<group>"; };
+		6AA977512B00DE7000BB5A14 /* HomeEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -187,6 +189,7 @@
 		6AA976F52AFD035D00BB5A14 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6AA9774E2B00D50C00BB5A14 /* Helper */,
 				6AA9774B2B00D35700BB5A14 /* Model */,
 				6AA976F82AFD037200BB5A14 /* HomeViewController.swift */,
 				6AA976F62AFD037200BB5A14 /* HomePresenter.swift */,
@@ -195,7 +198,7 @@
 				6AA976F92AFD037200BB5A14 /* HomeProtocols.swift */,
 				6AA976FA2AFD037200BB5A14 /* HomeBuilder.swift */,
 				6AA976FC2AFD037200BB5A14 /* HomeViewModel.swift */,
-				6AA976FD2AFD037200BB5A14 /* HomeEntity.swift */,
+				6AA977512B00DE7000BB5A14 /* HomeEntity.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -288,6 +291,14 @@
 				6AA9774C2B00D38A00BB5A14 /* Game.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		6AA9774E2B00D50C00BB5A14 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				6AA9774F2B00D55400BB5A14 /* HomeMapper.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 		8D99510E23041BC461053E8B /* Pods */ = {
@@ -418,10 +429,10 @@
 				6AA977242AFF8E1B00BB5A14 /* URLRequest+Init.swift in Sources */,
 				6AA976ED2AFCF14700BB5A14 /* TabBarItemType.swift in Sources */,
 				6AA977122AFE3BEA00BB5A14 /* UIColor.swift in Sources */,
-				6AA977052AFD037200BB5A14 /* HomeEntity.swift in Sources */,
 				6AA977432B00C9A800BB5A14 /* Endpoint.swift in Sources */,
 				6AA977042AFD037200BB5A14 /* HomeViewModel.swift in Sources */,
 				6AA976FF2AFD037200BB5A14 /* HomeRouter.swift in Sources */,
+				6AA977502B00D55400BB5A14 /* HomeMapper.swift in Sources */,
 				6AA9771B2AFF586B00BB5A14 /* HTTPClient.swift in Sources */,
 				6AA9773D2B00C68600BB5A14 /* APIEnvironment.swift in Sources */,
 				6AA976EE2AFCF14700BB5A14 /* TabBarController.swift in Sources */,
@@ -432,6 +443,7 @@
 				6AA9770D2AFE3AE900BB5A14 /* UISearchBar+Extension.swift in Sources */,
 				6AA977172AFE40B800BB5A14 /* BaseNavigationController.swift in Sources */,
 				6AA976FE2AFD037200BB5A14 /* HomePresenter.swift in Sources */,
+				6AA977522B00DE7000BB5A14 /* HomeEntity.swift in Sources */,
 				6AA977022AFD037200BB5A14 /* HomeBuilder.swift in Sources */,
 				6AA977002AFD037200BB5A14 /* HomeViewController.swift in Sources */,
 				6AA977452B00C9D000BB5A14 /* Endpoint+toURL.swift in Sources */,
