@@ -52,6 +52,7 @@
 		6AA977742B014A9900BB5A14 /* DetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9776C2B014A9900BB5A14 /* DetailProtocols.swift */; };
 		6AA977752B014A9900BB5A14 /* DetailBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9776D2B014A9900BB5A14 /* DetailBuilder.swift */; };
 		6AA977762B014A9900BB5A14 /* DetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9776E2B014A9900BB5A14 /* DetailInteractor.swift */; };
+		6AA9777E2B0153D700BB5A14 /* GameDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9777D2B0153D700BB5A14 /* GameDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -103,6 +104,7 @@
 		6AA9776C2B014A9900BB5A14 /* DetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailProtocols.swift; sourceTree = "<group>"; };
 		6AA9776D2B014A9900BB5A14 /* DetailBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBuilder.swift; sourceTree = "<group>"; };
 		6AA9776E2B014A9900BB5A14 /* DetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInteractor.swift; sourceTree = "<group>"; };
+		6AA9777D2B0153D700BB5A14 /* GameDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailModel.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -309,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA977482B00CC2400BB5A14 /* GameModel.swift */,
+				6AA9777D2B0153D700BB5A14 /* GameDetailModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -525,6 +528,7 @@
 				6AA977742B014A9900BB5A14 /* DetailProtocols.swift in Sources */,
 				6AA977492B00CC2400BB5A14 /* GameModel.swift in Sources */,
 				6AA977142AFE3C0A00BB5A14 /* AssetColors.swift in Sources */,
+				6AA9777E2B0153D700BB5A14 /* GameDetailModel.swift in Sources */,
 				6AA977222AFF8D8200BB5A14 /* HTTPMethod.swift in Sources */,
 				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
 				6AA9771D2AFF624600BB5A14 /* AlamofireHTTPClient.swift in Sources */,
