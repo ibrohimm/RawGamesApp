@@ -35,7 +35,7 @@ final class HomeViewController: UIViewController, HomeViewInput {
     }
     
     func displayError(message: String) {
-        
+        showAlert(with: message)
     }
     
     func showLoader() {
