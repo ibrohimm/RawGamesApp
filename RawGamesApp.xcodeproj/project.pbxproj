@@ -39,6 +39,7 @@
 		6AA977492B00CC2400BB5A14 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977482B00CC2400BB5A14 /* GameModel.swift */; };
 		6AA9774D2B00D38A00BB5A14 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9774C2B00D38A00BB5A14 /* Game.swift */; };
 		6AA977502B00D55400BB5A14 /* HomeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9774F2B00D55400BB5A14 /* HomeMapper.swift */; };
+		6AA977572B00ECE000BB5A14 /* GameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977562B00ECE000BB5A14 /* GameTableViewCell.swift */; };
 		6AA9775A2B00ED2200BB5A14 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977592B00ED2200BB5A14 /* BaseTableViewCell.swift */; };
 		6AA9775C2B00EFEE00BB5A14 /* ScrollableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9775B2B00EFEE00BB5A14 /* ScrollableViews.swift */; };
 		6AA9775F2B00F43E00BB5A14 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9775E2B00F43E00BB5A14 /* HomeViewModel.swift */; };
@@ -80,6 +81,7 @@
 		6AA977482B00CC2400BB5A14 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		6AA9774C2B00D38A00BB5A14 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		6AA9774F2B00D55400BB5A14 /* HomeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapper.swift; sourceTree = "<group>"; };
+		6AA977562B00ECE000BB5A14 /* GameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTableViewCell.swift; sourceTree = "<group>"; };
 		6AA977592B00ED2200BB5A14 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		6AA9775B2B00EFEE00BB5A14 /* ScrollableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableViews.swift; sourceTree = "<group>"; };
 		6AA9775E2B00F43E00BB5A14 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA9775D2B00F42B00BB5A14 /* ViewModel */,
+				6AA977532B00ECC000BB5A14 /* View */,
 				6AA9774E2B00D50C00BB5A14 /* Helper */,
 				6AA9774B2B00D35700BB5A14 /* Model */,
 				6AA976F82AFD037200BB5A14 /* HomeViewController.swift */,
@@ -302,6 +305,14 @@
 				6AA9774F2B00D55400BB5A14 /* HomeMapper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		6AA977532B00ECC000BB5A14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6AA977562B00ECE000BB5A14 /* GameTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		6AA977582B00ED1B00BB5A14 /* BaseView */ = {
