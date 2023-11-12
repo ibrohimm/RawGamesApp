@@ -23,13 +23,13 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
         let favoriteCtr = getControllerAt(type: .favorite)
         
         setViewControllers([homeCtr, favoriteCtr], animated: false)
-        tabBar.backgroundColor = .white
+        tabBar.backgroundColor = .appColor(.primaryBackground)
     }
     
     private func getControllerAt(type: TabBarItemType) -> UIViewController {
         switch type {
         case .home:
-            let home = UIViewController()
+            let home = HomeBuilder().build()
             return createTabBarItem(ctr: home, type: type)
             
         case .favorite:
@@ -42,13 +42,14 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
     }
     
     private func createTabBarItem(ctr: UIViewController, type: TabBarItemType) -> UINavigationController {
-        let nv = UINavigationController(rootViewController: ctr)
         let customTab = TabBarItem(
             title: type.name.localized(),
             image: UIImage(named: type.icon),
             selectedImage: UIImage(named: type.icon))
         customTab.tabItemType = type
         customTab.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10)], for: .normal)
+        
+        let nv = BaseNavigationController(rootViewController: ctr)
         nv.tabBarItem = customTab
         
         return nv

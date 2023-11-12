@@ -5,5 +5,6 @@ target 'RawGamesApp' do
   use_frameworks!
   
   pod 'Alamofire'
+  pod 'Kingfisher', '~> 7.0'
   
 end
