@@ -59,6 +59,10 @@ extension HomeViewController: UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        presenter?.startPaginition(for: indexPath.row)
+    }
 }
 
 extension HomeViewController: UITableViewDelegate {

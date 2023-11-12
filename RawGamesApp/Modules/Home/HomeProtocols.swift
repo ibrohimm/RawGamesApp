@@ -19,6 +19,7 @@ protocol HomeViewOutput: AnyObject {
     func viewDidLoad()
     func numberOfGames() -> Int
     func homeViewModel(at index: Int) -> HomeViewModel
+    func startPaginition(for: Int)
 }
 
 // MARK: - Interactor
@@ -26,6 +27,7 @@ protocol HomeViewOutput: AnyObject {
 // MARK: Input
 protocol HomeInteractorInput: AnyObject {
     func loadData()
+    func loadMore(with index: Int)
 }
 
 // MARK: Output

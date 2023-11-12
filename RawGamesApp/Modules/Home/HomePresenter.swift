@@ -29,6 +29,16 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
         interactor.loadData()
     }
     
+    func numberOfGames() -> Int { homeViewModels.count }
+    
+    func homeViewModel(at index: Int) -> HomeViewModel {
+        homeViewModels[index]
+    }
+    
+    func startPaginition(for index: Int) {
+        interactor.loadMore(with: index)
+    }
+    
     // MARK: - Interactor Output
     
     func didFetchGames(with games: [Game]) {
@@ -38,14 +48,6 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
     
     func didFetchFailed(error: Error) {
         view?.displayError(message: error.localizedDescription)
-    }
-    
-    // MARK: - Helper
-    
-    func numberOfGames() -> Int { homeViewModels.count }
-    
-    func homeViewModel(at index: Int) -> HomeViewModel {
-        homeViewModels[index]
     }
     
 }

@@ -10,6 +10,8 @@ import Foundation
 struct GameModel: Codable {
     let results: [ResultGameModel]
     let count: Int
+    let next: String?
+    let previous: String?
 }
 
 struct ResultGameModel: Codable {
