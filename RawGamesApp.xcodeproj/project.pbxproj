@@ -41,6 +41,7 @@
 		6AA977502B00D55400BB5A14 /* HomeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9774F2B00D55400BB5A14 /* HomeMapper.swift */; };
 		6AA9775A2B00ED2200BB5A14 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977592B00ED2200BB5A14 /* BaseTableViewCell.swift */; };
 		6AA9775C2B00EFEE00BB5A14 /* ScrollableViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9775B2B00EFEE00BB5A14 /* ScrollableViews.swift */; };
+		6AA9775F2B00F43E00BB5A14 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9775E2B00F43E00BB5A14 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +82,7 @@
 		6AA9774F2B00D55400BB5A14 /* HomeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapper.swift; sourceTree = "<group>"; };
 		6AA977592B00ED2200BB5A14 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		6AA9775B2B00EFEE00BB5A14 /* ScrollableViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollableViews.swift; sourceTree = "<group>"; };
+		6AA9775E2B00F43E00BB5A14 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,6 +191,7 @@
 		6AA976F52AFD035D00BB5A14 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6AA9775D2B00F42B00BB5A14 /* ViewModel */,
 				6AA9774E2B00D50C00BB5A14 /* Helper */,
 				6AA9774B2B00D35700BB5A14 /* Model */,
 				6AA976F82AFD037200BB5A14 /* HomeViewController.swift */,
@@ -307,6 +310,14 @@
 				6AA977592B00ED2200BB5A14 /* BaseTableViewCell.swift */,
 			);
 			path = BaseView;
+			sourceTree = "<group>";
+		};
+		6AA9775D2B00F42B00BB5A14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6AA9775E2B00F43E00BB5A14 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8D99510E23041BC461053E8B /* Pods */ = {
@@ -453,6 +464,7 @@
 				6AA976FE2AFD037200BB5A14 /* HomePresenter.swift in Sources */,
 				6AA977022AFD037200BB5A14 /* HomeBuilder.swift in Sources */,
 				6AA977572B00ECE000BB5A14 /* GameTableViewCell.swift in Sources */,
+				6AA9775F2B00F43E00BB5A14 /* HomeViewModel.swift in Sources */,
 				6AA977002AFD037200BB5A14 /* HomeViewController.swift in Sources */,
 				6AA977452B00C9D000BB5A14 /* Endpoint+toURL.swift in Sources */,
 				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
