@@ -9,7 +9,9 @@
 
 // MARK: Input
 protocol HomeViewInput: AnyObject {
-    func setup(with viewModel: HomeViewModel)
+    func displayGames(with games: [Game])
+    func displayError(message: String)
+    
 }
 
 // MARK: Output
@@ -21,11 +23,13 @@ protocol HomeViewOutput: AnyObject {
 
 // MARK: Input
 protocol HomeInteractorInput: AnyObject {
-    func loadData() -> HomeEntity
+    func loadData()
 }
 
 // MARK: Output
 protocol HomeInteractorOutput: AnyObject {
+    func didFetchGames(with games: [Game])
+    func didFetchFailed(error: Error)
 }
 
 // MARK: - Router

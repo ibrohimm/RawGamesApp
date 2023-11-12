@@ -29,7 +29,11 @@ final class HomeViewController: UIViewController, HomeViewInput {
     
     // MARK: - View Input
     
-    func setup(with viewModel: HomeViewModel) {
+    func displayGames(with games: [Game]) {
+        print(games)
+    }
+    
+    func displayError(message: String) {
         
     }
 }

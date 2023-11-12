@@ -24,14 +24,16 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
     // MARK: - View Output
     
     func viewDidLoad() {
-        let entity = interactor.loadData()
-        let viewModel = makeViewModel(for: entity)
-        view?.setup(with: viewModel)
+        interactor.loadData()
     }
     
-    // MARK: - View Model
+    // MARK: - Interactor Output
     
-    private func makeViewModel(for entity: HomeEntity) -> HomeViewModel {
-        return HomeViewModel()
+    func didFetchGames(with games: [Game]) {
+        view?.displayGames(with: games)
+    }
+    
+    func didFetchFailed(error: Error) {
+        view?.displayError(message: error.localizedDescription)
     }
 }

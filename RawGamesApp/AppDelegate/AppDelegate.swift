@@ -18,6 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
         
+        KeychainManager.standard.saveAPIKey(apiKey: "3be8af6ebf124ffe81d90f514e59856c")
+        
         return true
     }
 

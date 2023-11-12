@@ -13,6 +13,7 @@ final class HomeBuilder {
         let viewController = HomeViewController()
         let interactor = HomeInteractor()
         let router = HomeRouter(viewController: viewController)
+        let client = AlamofireHTTPClient()
         
         let presenter = HomePresenter(
             view: viewController,
@@ -21,7 +22,7 @@ final class HomeBuilder {
         )
         
         viewController.set(presenter: presenter)
-        interactor.set(presenter: presenter)
+        interactor.set(presenter: presenter, client: client)
         
         return viewController
     }
