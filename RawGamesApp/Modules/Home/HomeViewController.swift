@@ -29,8 +29,8 @@ final class HomeViewController: UIViewController, HomeViewInput {
     
     // MARK: - View Input
     
-    func displayGames(with games: [Game]) {
-        print(games)
+    func reloadTableView() {
+        tableView.reloadData()
     }
     
     func displayError(message: String) {
@@ -49,10 +49,15 @@ extension HomeViewController: UISearchBarDelegate, UIScrollViewDelegate {
 }
 
 extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 0 }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter?.numberOfGames() ?? 0
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        let cell = tableView.dequeueCell(GameTableViewCell.self, for: indexPath)
+        if let viewModel = presenter?.homeViewModel(at: indexPath.row) {    cell.configure(with: viewModel)
+        }
+        return cell
     }
 }
 
@@ -93,6 +98,7 @@ extension HomeViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.register(GameTableViewCell.self)
         
         view.addSubview(tableView)
         NSLayoutConstraint.activate([

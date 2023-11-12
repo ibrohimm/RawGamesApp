@@ -9,7 +9,7 @@
 
 // MARK: Input
 protocol HomeViewInput: AnyObject {
-    func displayGames(with games: [Game])
+    func reloadTableView()
     func displayError(message: String)
     
 }
@@ -17,6 +17,8 @@ protocol HomeViewInput: AnyObject {
 // MARK: Output
 protocol HomeViewOutput: AnyObject {
     func viewDidLoad()
+    func numberOfGames() -> Int
+    func homeViewModel(at index: Int) -> HomeViewModel
 }
 
 // MARK: - Interactor
