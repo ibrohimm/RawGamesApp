@@ -37,6 +37,7 @@
 		6AA977382B00C50000BB5A14 /* URLComponents+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977372B00C50000BB5A14 /* URLComponents+Extension.swift */; };
 		6AA9773D2B00C68600BB5A14 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9773C2B00C68600BB5A14 /* APIEnvironment.swift */; };
 		6AA977432B00C9A800BB5A14 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977422B00C9A800BB5A14 /* Endpoint.swift */; };
+		6AA977452B00C9D000BB5A14 /* Endpoint+toURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977442B00C9D000BB5A14 /* Endpoint+toURL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		6AA977372B00C50000BB5A14 /* URLComponents+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLComponents+Extension.swift"; sourceTree = "<group>"; };
 		6AA9773C2B00C68600BB5A14 /* APIEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
 		6AA977422B00C9A800BB5A14 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		6AA977442B00C9D000BB5A14 /* Endpoint+toURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Endpoint+toURL.swift"; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -261,6 +263,7 @@
 			children = (
 				6AA9773C2B00C68600BB5A14 /* APIEnvironment.swift */,
 				6AA977422B00C9A800BB5A14 /* Endpoint.swift */,
+				6AA977442B00C9D000BB5A14 /* Endpoint+toURL.swift */,
 			);
 			path = Endpoints;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				6AA976FE2AFD037200BB5A14 /* HomePresenter.swift in Sources */,
 				6AA977022AFD037200BB5A14 /* HomeBuilder.swift in Sources */,
 				6AA977002AFD037200BB5A14 /* HomeViewController.swift in Sources */,
+				6AA977452B00C9D000BB5A14 /* Endpoint+toURL.swift in Sources */,
 				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
 				6AA977142AFE3C0A00BB5A14 /* AssetColors.swift in Sources */,
 				6AA977222AFF8D8200BB5A14 /* HTTPMethod.swift in Sources */,
