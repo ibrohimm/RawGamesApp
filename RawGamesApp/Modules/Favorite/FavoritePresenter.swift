@@ -11,6 +11,8 @@ final class FavoritePresenter: FavoriteViewOutput, FavoriteInteractorOutput {
     private let interactor: FavoriteInteractorInput
     private let router: FavoriteRouterInput
     
+    private var favoriteViewModels: [FavoriteViewModel] = []
+    
     // MARK: - Init
     
     init(view: FavoriteViewInput,
@@ -23,11 +25,30 @@ final class FavoritePresenter: FavoriteViewOutput, FavoriteInteractorOutput {
     
     // MARK: - View Output
     
-    func viewDidLoad() {
+    func viewWillAppear() {
         interactor.loadData()
     }
     
-    // MARK: - View Model
+    func numberOfFavoriteGames() -> Int {
+        favoriteViewModels.count
+    }
     
+    func favoriteViewModel(at index: Int) -> FavoriteViewModel {
+        favoriteViewModels[index]
+    }
     
+    func didSelectUser(at index: Int) {
+        guard let viewModel = favoriteViewModels[safe: index] else {
+            return
+        }
+        
+        router.navigateToDetail(with: viewModel.id)
+    }
+    
+    // MARK: - Interactor Output
+    
+    func didFetchFavoritesGames(with games: [FavoritedGame]) {
+        favoriteViewModels = games.map { FavoriteViewModel(game: $0) }
+        view?.reloadTableView()
+    }
 }

@@ -10,13 +10,18 @@ import UIKit
 final class FavoriteViewController: UIViewController, FavoriteViewInput {
     
     private var presenter: FavoriteViewOutput?
+    private let tableView = UITableView(frame: .zero, style: .plain)
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        presenter?.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.viewWillAppear()
     }
     
     // MARK: - Injection
@@ -25,13 +30,58 @@ final class FavoriteViewController: UIViewController, FavoriteViewInput {
         self.presenter = presenter
     }
     
-    // MARK: - UI Setup
-    
-    private func setupUI() {
-        
-    }
-    
     // MARK: - View Input
     
+    func reloadTableView() {
+        tableView.reloadData()
+    }
+}
+
+extension FavoriteViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return presenter?.numberOfFavoriteGames() ?? 0
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueCell(FavoriteGameTableCell.self, for: indexPath)
+        if let viewModel = presenter?.favoriteViewModel(at: indexPath.row) {
+            cell.configure(with: viewModel)
+        }
+        return cell
+    }
+}
+
+extension FavoriteViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.didSelectUser(at: indexPath.row)
+    }
+}
+
+// MARK: - UI Setup
+extension FavoriteViewController {
+    private func setupUI() {
+        view.backgroundColor = .appColor(.primaryBackground)
+        createTableView()
+    }
+    
+    private func createTableView() {
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .singleLine
+        tableView.rowHeight = 100
+        tableView.layer.cornerRadius = 12
+        tableView.layer.masksToBounds = true
+        tableView.showsVerticalScrollIndicator = false
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(FavoriteGameTableCell.self)
+        
+        view.addSubview(tableView)
+        NSLayoutConstraint.activate([
+            tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
 }

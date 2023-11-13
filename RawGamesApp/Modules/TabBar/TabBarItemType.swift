@@ -18,7 +18,7 @@ enum TabBarItemType: Int {
         case .home:
             new = "HOME"
         case .favorite:
-            new = "FAVORITE"
+            new = "FAVORITES"
         case .unknown:
             new = "Unknown"
         }

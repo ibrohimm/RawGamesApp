@@ -54,6 +54,7 @@ class CoreDataManager {
             favoriteGame.gameDescription = gameDetail.gameDetailModelDescription
             favoriteGame.backgroundImage = gameDetail.backgroundImage
             favoriteGame.website = gameDetail.website
+            favoriteGame.metacritic = Int32(gameDetail.metacritic ?? 0)
             
             saveContext()
         }
@@ -67,7 +68,6 @@ class CoreDataManager {
         do {
             let favoritedGames = try context.fetch(fetchRequest)
             
-            // Assuming there is only one favorited game with a given ID
             if let favoritedGame = favoritedGames.first {
                 context.delete(favoritedGame)
                 
@@ -75,6 +75,31 @@ class CoreDataManager {
             }
         } catch {
             print("Error fetching favorited game: \(error)")
+        }
+    }
+    
+    // MARK: Fetch Favorite Games
+    func fetchFavoriteGames() -> [FavoritedGame] {
+        let fetchRequest: NSFetchRequest<FavoriteGame> = FavoriteGame.fetchRequest()
+        
+        do {
+            let favoritedGames = try context.fetch(fetchRequest)
+            
+            let gameDetails = favoritedGames.map { game in
+                FavoritedGame(
+                    id: Int(game.id),
+                    name: game.name ?? "",
+                    description: game.gameDescription ?? "",
+                    image: game.backgroundImage,
+                    website: game.website, 
+                    metacritic: Int(game.metacritic)
+                )
+            }
+            
+            return gameDetails
+        } catch {
+            print("Error fetching favorited games: \(error)")
+            return []
         }
     }
     
@@ -86,6 +111,7 @@ class CoreDataManager {
         do {
             let favoritedGames = try context.fetch(fetchRequest)
             return !favoritedGames.isEmpty
+            
         } catch {
             print("Error checking if game is favorited: \(error)")
             return false

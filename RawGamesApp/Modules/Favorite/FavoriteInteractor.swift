@@ -11,7 +11,10 @@ final class FavoriteInteractor: FavoriteInteractorInput {
     
     // MARK: - Services
     
-    // declare API services here
+    func loadData() {
+        let favoritedGames = CoreDataManager.shared.fetchFavoriteGames()
+        presenter?.didFetchFavoritesGames(with: favoritedGames)
+    }
     
     // MARK: - Injection
     
@@ -21,7 +24,4 @@ final class FavoriteInteractor: FavoriteInteractorInput {
     
     // MARK: - Interactor Input
     
-    func loadData() {
-        
-    }
 }

@@ -14,4 +14,12 @@ final class FavoriteRouter: FavoriteRouterInput {
     init(viewController: UIViewController) {
         self.viewController = viewController
     }
+    
+    // MARK: - Router Input
+    
+    func navigateToDetail(with id: Int) {
+        let detailModule = DetailBuilder().build(withID: id)
+        detailModule.hidesBottomBarWhenPushed = true
+        viewController?.navigationController?.pushViewController(detailModule, animated: true)
+    }
 }

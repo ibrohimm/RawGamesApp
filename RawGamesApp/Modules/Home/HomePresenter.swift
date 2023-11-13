@@ -49,9 +49,7 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
     
     func didSelectUser(at index: Int) {
         let viewModels = interactor.getIsSearch() ? searchViewModels : homeViewModels
-        guard let viewModel = viewModels[safe: index] else {
-            return // Index out of bounds, handle this scenario appropriately
-        }
+        guard let viewModel = viewModels[safe: index] else { return }
         
         router.navigateToGameDetails(with: viewModel.id)
     }

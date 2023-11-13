@@ -9,12 +9,16 @@
 
 // MARK: Input
 protocol FavoriteViewInput: AnyObject {
-    
+    func reloadTableView()
 }
 
 // MARK: Output
 protocol FavoriteViewOutput: AnyObject {
-    func viewDidLoad()
+    func viewWillAppear()
+    func numberOfFavoriteGames() -> Int
+    func favoriteViewModel(at index: Int) -> FavoriteViewModel
+    func didSelectUser(at index: Int)
+    
 }
 
 // MARK: - Interactor
@@ -26,9 +30,11 @@ protocol FavoriteInteractorInput: AnyObject {
 
 // MARK: Output
 protocol FavoriteInteractorOutput: AnyObject {
+    func didFetchFavoritesGames(with games: [FavoritedGame])
 }
 
 // MARK: - Router
 
 protocol FavoriteRouterInput: AnyObject {
+    func navigateToDetail(with id: Int)
 }
