@@ -25,11 +25,6 @@ private extension GameDetailModel {
             name: name,
             gameDetailModelDescription: gameDetailModelDescription,
             backgroundImage: backgroundImage,
-            added: added,
-            rating: rating,
-            ratingTop: ratingTop, 
-            released: released,
-            reviewsCount: reviewsCount,
             website: website)
     }
 }
