@@ -12,11 +12,13 @@ struct DetailViewModel {
     let image: String?
     let description: String
     let website: String?
+    let reddit: String?
     
     init(detail: GameDetail) {
         self.name = detail.name
         self.image = detail.backgroundImage
         self.description = detail.gameDetailModelDescription
         self.website = detail.website
+        self.reddit = detail.reddit
     }
 }

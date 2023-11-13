@@ -22,7 +22,8 @@ final class HomeInteractor: HomeInteractorInput {
     private var searchTimer: Timer?
     private var isSearch = false
     private var searchedText: String = ""
-
+    private var openedItemIdentifiers = Set<Int>()
+    
     // MARK: - Init
     
     init(client: HTTPClient) {
@@ -155,4 +156,12 @@ final class HomeInteractor: HomeInteractorInput {
     }
     
     func getIsSearch() -> Bool { isSearch }
+    
+    func hasOpenedDetail(for itemIdentifier: Int) -> Bool {
+        return openedItemIdentifiers.contains(itemIdentifier)
+    }
+    
+    func markItemAsOpened(_ itemIdentifier: Int) {
+        openedItemIdentifiers.insert(itemIdentifier)
+    }
 }

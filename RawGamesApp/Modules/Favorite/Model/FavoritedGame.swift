@@ -13,5 +13,6 @@ struct FavoritedGame {
     let description: String
     let image: String?
     let website: String?
+    let reddit: String?
     let metacritic: Int?
 }

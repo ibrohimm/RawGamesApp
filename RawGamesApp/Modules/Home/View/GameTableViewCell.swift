@@ -51,7 +51,9 @@ final class GameTableViewCell: BaseTableViewCell {
     }()
     
     // MARK: - Helper
-    func configure(with viewModel: HomeViewModel) {
+    func configure(with viewModel: HomeViewModel, isItemOpened: Bool) {
+        backgroundColor = isItemOpened ? .systemBlue.withAlphaComponent(0.5) : .appColor(.customLightGray)
+        
         title.text = viewModel.name
         genres.text = viewModel.genres
         progressView.progress = viewModel.metacritic

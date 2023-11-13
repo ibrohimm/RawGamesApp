@@ -35,8 +35,10 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
         interactor.getIsSearch() ? searchViewModels.count : homeViewModels.count
     }
     
-    func homeViewModel(at index: Int) -> HomeViewModel {
-        interactor.getIsSearch() ? searchViewModels[index] : homeViewModels[index]
+    func prepareCellViewModel(at index: Int) -> (viewModel: HomeViewModel, isItemOpened: Bool) {
+        let viewModel = interactor.getIsSearch() ? searchViewModels[index] : homeViewModels[index]
+        let isItemOpened = interactor.hasOpenedDetail(for: viewModel.id)
+        return (viewModel, isItemOpened)
     }
     
     func startPaginition(for index: Int) {
@@ -51,7 +53,9 @@ final class HomePresenter: HomeViewOutput, HomeInteractorOutput {
         let viewModels = interactor.getIsSearch() ? searchViewModels : homeViewModels
         guard let viewModel = viewModels[safe: index] else { return }
         
+        interactor.markItemAsOpened(viewModel.id)
         router.navigateToGameDetails(with: viewModel.id)
+        view?.reloadTableView()
     }
     
     // MARK: - Interactor Output

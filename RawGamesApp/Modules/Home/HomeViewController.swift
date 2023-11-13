@@ -73,7 +73,8 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueCell(GameTableViewCell.self, for: indexPath)
-        if let viewModel = presenter?.homeViewModel(at: indexPath.row) {    cell.configure(with: viewModel)
+        if let cellViewModel = presenter?.prepareCellViewModel(at: indexPath.row) {
+            cell.configure(with: cellViewModel.viewModel, isItemOpened: cellViewModel.isItemOpened)
         }
         return cell
     }

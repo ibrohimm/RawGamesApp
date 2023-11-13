@@ -19,7 +19,7 @@ protocol HomeViewInput: AnyObject {
 protocol HomeViewOutput: AnyObject {
     func viewDidLoad()
     func numberOfGames() -> Int
-    func homeViewModel(at index: Int) -> HomeViewModel
+    func prepareCellViewModel(at index: Int) -> (viewModel: HomeViewModel, isItemOpened: Bool)
     func startPaginition(for: Int)
     func search(with query: String)
     func didSelectUser(at index: Int)
@@ -33,6 +33,8 @@ protocol HomeInteractorInput: AnyObject {
     func loadMore(with index: Int)
     func search(with query: String)
     func getIsSearch() -> Bool
+    func markItemAsOpened(_ itemIdentifier: Int)
+    func hasOpenedDetail(for itemIdentifier: Int) -> Bool
 }
 
 // MARK: Output

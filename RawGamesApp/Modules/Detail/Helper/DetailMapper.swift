@@ -25,6 +25,6 @@ private extension GameDetailModel {
             name: name,
             gameDetailModelDescription: gameDetailModelDescription,
             backgroundImage: backgroundImage,
-            website: website, metacritic: metacritic)
+            website: website, reddit: reddit, metacritic: metacritic)
     }
 }

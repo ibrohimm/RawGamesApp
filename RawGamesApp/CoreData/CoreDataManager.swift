@@ -54,6 +54,7 @@ final class CoreDataManager {
             favoriteGame.gameDescription = gameDetail.gameDetailModelDescription
             favoriteGame.backgroundImage = gameDetail.backgroundImage
             favoriteGame.website = gameDetail.website
+            favoriteGame.reddit = gameDetail.reddit
             favoriteGame.metacritic = Int32(gameDetail.metacritic ?? 0)
             
             saveContext()
@@ -91,7 +92,8 @@ final class CoreDataManager {
                     name: game.name ?? "",
                     description: game.gameDescription ?? "",
                     image: game.backgroundImage,
-                    website: game.website, 
+                    website: game.website,
+                    reddit: game.reddit,
                     metacritic: Int(game.metacritic)
                 )
             }
