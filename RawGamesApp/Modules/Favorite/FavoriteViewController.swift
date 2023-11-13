@@ -39,15 +39,20 @@ final class FavoriteViewController: UIViewController, FavoriteViewInput {
 
 extension FavoriteViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return presenter?.numberOfFavoriteGames() ?? 0
+        return presenter?.numberOfFavoriteGames() == 0 ? 1 :  (presenter?.numberOfFavoriteGames() ?? 0)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueCell(FavoriteGameTableCell.self, for: indexPath)
-        if let viewModel = presenter?.favoriteViewModel(at: indexPath.row) {
-            cell.configure(with: viewModel)
+        if presenter?.numberOfFavoriteGames() == 0 {
+            let cell = tableView.dequeueCell(EmptyStateTableCell.self, for: indexPath)
+            return cell
+        } else {
+            let cell = tableView.dequeueCell(FavoriteGameTableCell.self, for: indexPath)
+            if let viewModel = presenter?.favoriteViewModel(at: indexPath.row) {
+                cell.configure(with: viewModel)
+            }
+            return cell
         }
-        return cell
     }
 }
 
@@ -66,7 +71,7 @@ extension FavoriteViewController {
     
     private func createTableView() {
         tableView.backgroundColor = .clear
-        tableView.separatorStyle = .singleLine
+        tableView.separatorStyle = .none
         tableView.rowHeight = 100
         tableView.layer.cornerRadius = 12
         tableView.layer.masksToBounds = true
@@ -75,6 +80,7 @@ extension FavoriteViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(FavoriteGameTableCell.self)
+        tableView.register(EmptyStateTableCell.self)
         
         view.addSubview(tableView)
         NSLayoutConstraint.activate([

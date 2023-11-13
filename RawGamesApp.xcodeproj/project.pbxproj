@@ -70,6 +70,7 @@
 		6AA977C12B02307800BB5A14 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977C02B02307800BB5A14 /* FavoriteViewModel.swift */; };
 		6AA977C42B0231B600BB5A14 /* FavoriteGameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977C32B0231B600BB5A14 /* FavoriteGameTableCell.swift */; };
 		6AA977C72B0232AF00BB5A14 /* FavoritedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977C62B0232AF00BB5A14 /* FavoritedGame.swift */; };
+		6AA977CB2B0255F200BB5A14 /* EmptyStateTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977CA2B0255F200BB5A14 /* EmptyStateTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +140,7 @@
 		6AA977C02B02307800BB5A14 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		6AA977C32B0231B600BB5A14 /* FavoriteGameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGameTableCell.swift; sourceTree = "<group>"; };
 		6AA977C62B0232AF00BB5A14 /* FavoritedGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedGame.swift; sourceTree = "<group>"; };
+		6AA977CA2B0255F200BB5A14 /* EmptyStateTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableCell.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -480,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA977C32B0231B600BB5A14 /* FavoriteGameTableCell.swift */,
+				6AA977CA2B0255F200BB5A14 /* EmptyStateTableCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -648,6 +651,7 @@
 				6AA977862B01D59900BB5A14 /* DescriptionCell.swift in Sources */,
 				6AA977762B014A9900BB5A14 /* DetailInteractor.swift in Sources */,
 				6AA977172AFE40B800BB5A14 /* BaseNavigationController.swift in Sources */,
+				6AA977CB2B0255F200BB5A14 /* EmptyStateTableCell.swift in Sources */,
 				6AA976FE2AFD037200BB5A14 /* HomePresenter.swift in Sources */,
 				6AA977022AFD037200BB5A14 /* HomeBuilder.swift in Sources */,
 				6AA977572B00ECE000BB5A14 /* GameTableViewCell.swift in Sources */,
