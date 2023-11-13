@@ -55,6 +55,7 @@ final class DescriptionCell: BaseTableViewCell {
     // MARK: - Private
     
     private func updateReadMoreButton() {
+        readMoreButton.isHidden = viewModel?.description == nil
         readMoreButton.setTitle(isExpanded ? "READ_LESS".localized() : "READ_MORE".localized(), for: .normal)
     }
     

@@ -11,6 +11,7 @@ final class DetailViewController: UIViewController, DetailViewInput {
     
     private var presenter: DetailViewOutput?
     private let tableView = UITableView(frame: .zero, style: .grouped)
+    private let loadingIndicator = UIActivityIndicatorView(style: .white)
     
     // MARK: - Life Cycle
     
@@ -34,6 +35,14 @@ final class DetailViewController: UIViewController, DetailViewInput {
     
     func displayError(message: String) {
         showAlert(with: message)
+    }
+    
+    func displayLoading() {
+        loadingIndicator.startAnimating()
+    }
+    
+    func hideLoader() {
+        loadingIndicator.stopAnimating()
     }
     
     func updateFavoriteState(isFavorited: Bool) {
@@ -88,6 +97,7 @@ extension DetailViewController {
     private func setupUI() {
         view.backgroundColor = .appColor(.primaryBackground)
         createTableView()
+        createLoadingIndicator()
     }
     
     private func createTableView() {
@@ -106,6 +116,17 @@ extension DetailViewController {
             tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
+    }
+    
+    private func createLoadingIndicator() {
+        loadingIndicator.translatesAutoresizingMaskIntoConstraints = false
+        loadingIndicator.hidesWhenStopped = true
+        
+        view.addSubview(loadingIndicator)
+        NSLayoutConstraint.activate([
+            loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor),
         ])
     }
 }

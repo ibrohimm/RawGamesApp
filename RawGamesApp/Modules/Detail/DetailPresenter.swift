@@ -27,6 +27,7 @@ final class DetailPresenter: DetailViewOutput, DetailInteractorOutput {
     // MARK: - View Output
     
     func viewDidLoad() {
+        view?.displayLoading()
         interactor.loadDetail()
     }
     
@@ -42,10 +43,12 @@ final class DetailPresenter: DetailViewOutput, DetailInteractorOutput {
     
     func didFetchDetail(with detail: GameDetail) {
         detailViewModel = DetailViewModel(detail: detail)
+        view?.hideLoader()
         view?.reloadTableView()
     }
     
     func didFetchFailed(error: Error) {
+        view?.hideLoader()
         view?.displayError(message: error.localizedDescription)
     }
     

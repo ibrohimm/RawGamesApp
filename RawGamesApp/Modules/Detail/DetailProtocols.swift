@@ -12,6 +12,8 @@ protocol DetailViewInput: AnyObject {
     func reloadTableView()
     func displayError(message: String)
     func updateFavoriteState(isFavorited: Bool)
+    func displayLoading()
+    func hideLoader()
 }
 
 // MARK: Output
