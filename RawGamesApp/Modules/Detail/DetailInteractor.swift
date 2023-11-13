@@ -28,7 +28,7 @@ final class DetailInteractor: DetailInteractorInput {
         
         var component = URLComponents(url: Endpoint.toURL(.detail(id: detailID)), resolvingAgainstBaseURL: true)
         component?.setQueryParameters(params)
-        guard var url = component?.url else { return }
+        guard let url = component?.url else { return }
         
         client.get(from: url, method: .GET, headers: nil) { [weak self] result in
             switch result {

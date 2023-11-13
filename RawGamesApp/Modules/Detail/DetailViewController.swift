@@ -49,6 +49,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
             
         case DetailSections.description.rawValue:
             let cell = tableView.dequeueCell(DescriptionCell.self, for: indexPath)
+            cell.setTableView(tableView)
             cell.configure(with: viewModel)
             return cell
             
@@ -58,7 +59,7 @@ extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if DetailSections.image.rawValue == 0 {
+        if DetailSections.image.rawValue == indexPath.section {
             return tableView.bounds.height * 0.3
         } else {
             return UITableView.automaticDimension
@@ -73,7 +74,7 @@ extension DetailViewController {
         createTableView()
         
         let ratingLabel = UILabel()
-        ratingLabel.text = "Favorite"
+        ratingLabel.text = "Favorite❤️🩶"
         ratingLabel.textColor = .red
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: ratingLabel)
     }
