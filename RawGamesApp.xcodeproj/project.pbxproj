@@ -71,7 +71,18 @@
 		6AA977C42B0231B600BB5A14 /* FavoriteGameTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977C32B0231B600BB5A14 /* FavoriteGameTableCell.swift */; };
 		6AA977C72B0232AF00BB5A14 /* FavoritedGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977C62B0232AF00BB5A14 /* FavoritedGame.swift */; };
 		6AA977CB2B0255F200BB5A14 /* EmptyStateTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977CA2B0255F200BB5A14 /* EmptyStateTableCell.swift */; };
+		6AA977DC2B029A9900BB5A14 /* HomeInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977DB2B029A9900BB5A14 /* HomeInteractorTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6AA977D42B0260B400BB5A14 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6A3C1A0B2AFCA6AA002DD789 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6A3C1A122AFCA6AA002DD789;
+			remoteInfo = RawGamesApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		37CB20775FF319F8660319C3 /* Pods-RawGamesApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.release.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -141,6 +152,8 @@
 		6AA977C32B0231B600BB5A14 /* FavoriteGameTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteGameTableCell.swift; sourceTree = "<group>"; };
 		6AA977C62B0232AF00BB5A14 /* FavoritedGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritedGame.swift; sourceTree = "<group>"; };
 		6AA977CA2B0255F200BB5A14 /* EmptyStateTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateTableCell.swift; sourceTree = "<group>"; };
+		6AA977D02B0260B400BB5A14 /* RawGamesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RawGamesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AA977DB2B029A9900BB5A14 /* HomeInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeInteractorTests.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -151,6 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				285DA1BE94E0857C8415BB05 /* Pods_RawGamesApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AA977CD2B0260B400BB5A14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +190,7 @@
 			children = (
 				6AA976992AFCA9EB00BB5A14 /* README.md */,
 				6A3C1A152AFCA6AA002DD789 /* RawGamesApp */,
+				6AA977D12B0260B400BB5A14 /* RawGamesAppTests */,
 				6A3C1A142AFCA6AA002DD789 /* Products */,
 				8D99510E23041BC461053E8B /* Pods */,
 				2EA147035E70CF9934E507F6 /* Frameworks */,
@@ -180,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				6A3C1A132AFCA6AA002DD789 /* RawGamesApp.app */,
+				6AA977D02B0260B400BB5A14 /* RawGamesAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -495,6 +517,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		6AA977D12B0260B400BB5A14 /* RawGamesAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				6AA977DB2B029A9900BB5A14 /* HomeInteractorTests.swift */,
+			);
+			path = RawGamesAppTests;
+			sourceTree = "<group>";
+		};
 		8D99510E23041BC461053E8B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +556,24 @@
 			productReference = 6A3C1A132AFCA6AA002DD789 /* RawGamesApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		6AA977CF2B0260B400BB5A14 /* RawGamesAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6AA977D82B0260B400BB5A14 /* Build configuration list for PBXNativeTarget "RawGamesAppTests" */;
+			buildPhases = (
+				6AA977CC2B0260B400BB5A14 /* Sources */,
+				6AA977CD2B0260B400BB5A14 /* Frameworks */,
+				6AA977CE2B0260B400BB5A14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6AA977D52B0260B400BB5A14 /* PBXTargetDependency */,
+			);
+			name = RawGamesAppTests;
+			productName = RawGamesAppTests;
+			productReference = 6AA977D02B0260B400BB5A14 /* RawGamesAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -538,6 +586,11 @@
 				TargetAttributes = {
 					6A3C1A122AFCA6AA002DD789 = {
 						CreatedOnToolsVersion = 15.0.1;
+					};
+					6AA977CF2B0260B400BB5A14 = {
+						CreatedOnToolsVersion = 15.0.1;
+						LastSwiftMigration = 1500;
+						TestTargetID = 6A3C1A122AFCA6AA002DD789;
 					};
 				};
 			};
@@ -555,6 +608,7 @@
 			projectRoot = "";
 			targets = (
 				6A3C1A122AFCA6AA002DD789 /* RawGamesApp */,
+				6AA977CF2B0260B400BB5A14 /* RawGamesAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -568,6 +622,13 @@
 				6AA977102AFE3BB500BB5A14 /* Color.xcassets in Resources */,
 				6AA976DE2AFCE56200BB5A14 /* Localizable.strings in Resources */,
 				6A3C1A202AFCA6AB002DD789 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6AA977CE2B0260B400BB5A14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +748,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6AA977CC2B0260B400BB5A14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6AA977DC2B029A9900BB5A14 /* HomeInteractorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6AA977D52B0260B400BB5A14 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6A3C1A122AFCA6AA002DD789 /* RawGamesApp */;
+			targetProxy = 6AA977D42B0260B400BB5A14 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		6A3C1A212AFCA6AB002DD789 /* LaunchScreen.storyboard */ = {
@@ -882,6 +959,47 @@
 			};
 			name = Release;
 		};
+		6AA977D62B0260B400BB5A14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CB6VC9Q2Z4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RawGamesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RawGamesApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RawGamesApp";
+			};
+			name = Debug;
+		};
+		6AA977D72B0260B400BB5A14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CB6VC9Q2Z4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RawGamesAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RawGamesApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RawGamesApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -899,6 +1017,15 @@
 			buildConfigurations = (
 				6A3C1A282AFCA6AB002DD789 /* Debug */,
 				6A3C1A292AFCA6AB002DD789 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6AA977D82B0260B400BB5A14 /* Build configuration list for PBXNativeTarget "RawGamesAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6AA977D62B0260B400BB5A14 /* Debug */,
+				6AA977D72B0260B400BB5A14 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
