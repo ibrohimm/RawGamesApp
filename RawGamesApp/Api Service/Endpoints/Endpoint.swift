@@ -9,11 +9,14 @@ import Foundation
 
 enum Endpoint {
     case games
+    case detail(id: Int)
     
     var rawValue: String {
         switch self {
         case .games:
             return "games"
+        case .detail(id: let id):
+            return "games/\(id)"
         }
     }
     

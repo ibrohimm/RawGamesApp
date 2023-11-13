@@ -30,7 +30,7 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
         switch type {
         case .home:
             let home = HomeBuilder().build()
-            home.title = "RAW_GAMES".localized()
+            home.title = "🎮 " + "RAW_GAMES".localized()
             return createTabBarItem(ctr: home, type: type)
             
         case .favorite:
