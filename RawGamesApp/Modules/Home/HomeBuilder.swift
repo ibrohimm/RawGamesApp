@@ -11,10 +11,11 @@ final class HomeBuilder {
     
     func build() -> UIViewController {
         let viewController = HomeViewController()
-        let interactor = HomeInteractor()
         let router = HomeRouter(viewController: viewController)
-        let client = AlamofireHTTPClient()
         
+        let client = AlamofireHTTPClient()
+        let interactor = HomeInteractor(client: client)
+
         let presenter = HomePresenter(
             view: viewController,
             interactor: interactor,
@@ -22,7 +23,7 @@ final class HomeBuilder {
         )
         
         viewController.set(presenter: presenter)
-        interactor.set(presenter: presenter, client: client)
+        interactor.set(presenter: presenter)
         
         return viewController
     }

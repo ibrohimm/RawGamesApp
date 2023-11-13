@@ -10,7 +10,7 @@ import Foundation
 final class HomeInteractor: HomeInteractorInput {
     
     private weak var presenter: HomeInteractorOutput?
-    private var client: HTTPClient?
+    private let client: HTTPClient
     
     private var games: [Game] = []
     private var nextPageURL: String?
@@ -23,6 +23,12 @@ final class HomeInteractor: HomeInteractorInput {
     private var isSearch = false
     private var searchedText: String = ""
 
+    // MARK: - Init
+    
+    init(client: HTTPClient) {
+        self.client = client
+    }
+    
     // MARK: - Services
     
     func loadData() {
@@ -40,7 +46,7 @@ final class HomeInteractor: HomeInteractorInput {
             url = nextURL
         }
         
-        client?.get(from: url, method: .GET, headers: nil) { [weak self] result in
+        client.get(from: url, method: .GET, headers: nil) { [weak self] result in
             switch result {
             case let .success(data):
                 do {
@@ -105,7 +111,7 @@ final class HomeInteractor: HomeInteractorInput {
             url = nextURL
         }
         
-        client?.get(from: url, method: .GET, headers: nil) { [weak self] result in
+        client.get(from: url, method: .GET, headers: nil) { [weak self] result in
             switch result {
             case let .success(data):
                 do {
@@ -130,9 +136,8 @@ final class HomeInteractor: HomeInteractorInput {
     
     // MARK: - Injection
     
-    func set(presenter: HomeInteractorOutput, client: HTTPClient) {
+    func set(presenter: HomeInteractorOutput) {
         self.presenter = presenter
-        self.client = client
     }
     
     // MARK: - Helper
