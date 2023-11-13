@@ -34,7 +34,8 @@ final class TabBarController: UITabBarController, UITabBarControllerDelegate {
             return createTabBarItem(ctr: home, type: type)
             
         case .favorite:
-            let favorite = UIViewController()
+            let favorite = FavoriteBuilder().build()
+            favorite.title = type.name.localizedCapitalized
             return createTabBarItem(ctr: favorite, type: type)
             
         case .unknown:

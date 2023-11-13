@@ -17,9 +17,10 @@ struct GameDetailModel: Codable {
     let released: String?
     let reviewsCount: Int
     let website: String?
+    let metacritic: Int?
     
     enum CodingKeys: String, CodingKey {
-        case id, name, released, website, added, rating
+        case id, name, released, website, added, rating, metacritic
         case gameDetailModelDescription = "description_raw"
         case backgroundImage = "background_image"
         case ratingTop = "rating_top"

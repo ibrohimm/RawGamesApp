@@ -12,4 +12,5 @@ struct GameDetail {
     let name, gameDetailModelDescription: String
     let backgroundImage: String?
     let website: String?
+    let metacritic: Int?
 }
