@@ -29,16 +29,40 @@ final class DetailViewController: UIViewController, DetailViewInput {
     // MARK: - View Input
     
     func reloadTableView() {
-        
+        tableView.reloadData()
     }
 }
 
 // MARK: -
 extension DetailViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int { DetailSections.allCases.count }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { 1 }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let viewModel = presenter?.getDetailViewModel()
+        switch indexPath.section {
+        case DetailSections.image.rawValue:
+            let cell = tableView.dequeueCell(DetailImageCell.self, for: indexPath)
+            cell.configure(with: viewModel)
+            return cell
+            
+        case DetailSections.description.rawValue:
+            let cell = tableView.dequeueCell(DescriptionCell.self, for: indexPath)
+            cell.configure(with: viewModel)
+            return cell
+            
+        default:
+            return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DetailSections.image.rawValue == 0 {
+            return tableView.bounds.height * 0.3
+        } else {
+            return UITableView.automaticDimension
+        }
     }
 }
 
@@ -50,7 +74,7 @@ extension DetailViewController {
         
         let ratingLabel = UILabel()
         ratingLabel.text = "Favorite"
-        ratingLabel.textColor = .gray
+        ratingLabel.textColor = .red
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: ratingLabel)
     }
     
@@ -61,6 +85,8 @@ extension DetailViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(DetailImageCell.self)
+        tableView.register(DescriptionCell.self)
         
         view.addSubview(tableView)
         NSLayoutConstraint.activate([

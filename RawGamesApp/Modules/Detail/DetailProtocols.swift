@@ -9,23 +9,27 @@
 
 // MARK: Input
 protocol DetailViewInput: AnyObject {
-    
+    func reloadTableView()
 }
 
 // MARK: Output
 protocol DetailViewOutput: AnyObject {
     func viewDidLoad()
+    func getDetailViewModel() -> DetailViewModel?
 }
 
 // MARK: - Interactor
 
 // MARK: Input
 protocol DetailInteractorInput: AnyObject {
-    func loadData()
+    func loadDetail()
+    
 }
 
 // MARK: Output
 protocol DetailInteractorOutput: AnyObject {
+    func didFetchDetail(with detail: GameDetail)
+    func didFetchFailed(error: Error)
 }
 
 // MARK: - Router

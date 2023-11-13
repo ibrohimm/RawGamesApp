@@ -58,6 +58,7 @@
 		6AA977842B01D52D00BB5A14 /* DetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977832B01D52D00BB5A14 /* DetailImageCell.swift */; };
 		6AA977862B01D59900BB5A14 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977852B01D59900BB5A14 /* DescriptionCell.swift */; };
 		6AA977882B01D66E00BB5A14 /* DetailSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977872B01D66E00BB5A14 /* DetailSections.swift */; };
+		6AA9778B2B01D95000BB5A14 /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9778A2B01D95000BB5A14 /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -115,6 +116,7 @@
 		6AA977832B01D52D00BB5A14 /* DetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCell.swift; sourceTree = "<group>"; };
 		6AA977852B01D59900BB5A14 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
 		6AA977872B01D66E00BB5A14 /* DetailSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSections.swift; sourceTree = "<group>"; };
+		6AA9778A2B01D95000BB5A14 /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -369,6 +371,7 @@
 		6AA977682B014A6700BB5A14 /* Detail */ = {
 			isa = PBXGroup;
 			children = (
+				6AA977892B01D94400BB5A14 /* ViewModel */,
 				6AA977822B01D51100BB5A14 /* View */,
 				6AA9777A2B0153B400BB5A14 /* Helper */,
 				6AA977792B0153A200BB5A14 /* Model */,
@@ -406,6 +409,14 @@
 				6AA977852B01D59900BB5A14 /* DescriptionCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6AA977892B01D94400BB5A14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6AA9778A2B01D95000BB5A14 /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8D99510E23041BC461053E8B /* Pods */ = {
@@ -568,6 +579,7 @@
 				6AA977452B00C9D000BB5A14 /* Endpoint+toURL.swift in Sources */,
 				6AA977732B014A9900BB5A14 /* DetailViewController.swift in Sources */,
 				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
+				6AA9778B2B01D95000BB5A14 /* DetailViewModel.swift in Sources */,
 				6AA977742B014A9900BB5A14 /* DetailProtocols.swift in Sources */,
 				6AA977492B00CC2400BB5A14 /* GameModel.swift in Sources */,
 				6AA977882B01D66E00BB5A14 /* DetailSections.swift in Sources */,

@@ -9,9 +9,10 @@ import UIKit
 
 final class DetailBuilder {
     
-    func build() -> UIViewController {
+    func build(withID id: Int) -> UIViewController {
+        let client = AlamofireHTTPClient()
         let viewController = DetailViewController()
-        let interactor = DetailInteractor()
+        let interactor = DetailInteractor(client: client, id: id)
         let router = DetailRouter(viewController: viewController)
         
         let presenter = DetailPresenter(

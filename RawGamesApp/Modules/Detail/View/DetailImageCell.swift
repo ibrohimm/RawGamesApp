@@ -20,8 +20,8 @@ final class DetailImageCell: BaseTableViewCell {
     }()
     
     // MARK: - Helper
-    func configure(with model: String) {
-        
+    func configure(with viewModel: DetailViewModel?) {
+        gameImage.setImage(with: viewModel?.image)
     }
     
     override func setupView() {
@@ -31,7 +31,7 @@ final class DetailImageCell: BaseTableViewCell {
             gameImage.topAnchor.constraint(equalTo: contentView.topAnchor),
             gameImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             gameImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            gameImage.heightAnchor.constraint(equalTo: contentView.widthAnchor, constant: 120)
+            gameImage.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor)
         ])
     }
 }

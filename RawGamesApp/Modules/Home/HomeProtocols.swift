@@ -22,6 +22,7 @@ protocol HomeViewOutput: AnyObject {
     func homeViewModel(at index: Int) -> HomeViewModel
     func startPaginition(for: Int)
     func search(with query: String)
+    func didSelectUser(at index: Int)
 }
 
 // MARK: - Interactor

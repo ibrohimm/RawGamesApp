@@ -18,6 +18,7 @@ final class HomeRouter: HomeRouterInput {
     // MARK: - Router Input
     
     func navigateToGameDetails(with id: Int) {
-        
+        let detailModule = DetailBuilder().build(withID: id)
+        viewController?.navigationController?.pushViewController(detailModule, animated: true)
     }
 }

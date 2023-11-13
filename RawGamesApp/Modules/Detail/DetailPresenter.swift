@@ -11,6 +11,8 @@ final class DetailPresenter: DetailViewOutput, DetailInteractorOutput {
     private let interactor: DetailInteractorInput
     private let router: DetailRouterInput
     
+    private var detailViewModel: DetailViewModel?
+    
     // MARK: - Init
     
     init(view: DetailViewInput,
@@ -24,10 +26,21 @@ final class DetailPresenter: DetailViewOutput, DetailInteractorOutput {
     // MARK: - View Output
     
     func viewDidLoad() {
-        interactor.loadData()
+        interactor.loadDetail()
     }
     
-    // MARK: - View Model
+    func getDetailViewModel() -> DetailViewModel? {
+        detailViewModel
+    }
     
+    // MARK: - Interactor Output
     
+    func didFetchDetail(with detail: GameDetail) {
+        detailViewModel = DetailViewModel(detail: detail)
+        view?.reloadTableView()
+    }
+    
+    func didFetchFailed(error: Error) {
+        
+    }
 }
