@@ -67,6 +67,7 @@
 		6AA977BA2B022CDC00BB5A14 /* FavoriteProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977B22B022CDC00BB5A14 /* FavoriteProtocols.swift */; };
 		6AA977BB2B022CDC00BB5A14 /* FavoriteBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977B32B022CDC00BB5A14 /* FavoriteBuilder.swift */; };
 		6AA977BC2B022CDC00BB5A14 /* FavoriteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977B42B022CDC00BB5A14 /* FavoriteInteractor.swift */; };
+		6AA977C12B02307800BB5A14 /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977C02B02307800BB5A14 /* FavoriteViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +134,7 @@
 		6AA977B22B022CDC00BB5A14 /* FavoriteProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteProtocols.swift; sourceTree = "<group>"; };
 		6AA977B32B022CDC00BB5A14 /* FavoriteBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBuilder.swift; sourceTree = "<group>"; };
 		6AA977B42B022CDC00BB5A14 /* FavoriteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteInteractor.swift; sourceTree = "<group>"; };
+		6AA977C02B02307800BB5A14 /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -449,6 +451,7 @@
 		6AA977AE2B022CC600BB5A14 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				6AA977BF2B02305800BB5A14 /* ViewModel */,
 				6AA977B12B022CDC00BB5A14 /* FavoriteViewController.swift */,
 				6AA977AF2B022CDC00BB5A14 /* FavoritePresenter.swift */,
 				6AA977B42B022CDC00BB5A14 /* FavoriteInteractor.swift */,
@@ -457,6 +460,14 @@
 				6AA977B32B022CDC00BB5A14 /* FavoriteBuilder.swift */,
 			);
 			path = Favorite;
+			sourceTree = "<group>";
+		};
+		6AA977BF2B02305800BB5A14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6AA977C02B02307800BB5A14 /* FavoriteViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		8D99510E23041BC461053E8B /* Pods */ = {
@@ -636,6 +647,7 @@
 				6AA9771D2AFF624600BB5A14 /* AlamofireHTTPClient.swift in Sources */,
 				6AA977202AFF89EC00BB5A14 /* APIError.swift in Sources */,
 				6AA977B82B022CDC00BB5A14 /* FavoriteRouter.swift in Sources */,
+				6AA977C12B02307800BB5A14 /* FavoriteViewModel.swift in Sources */,
 				6AA977222AFF8D8200BB5A14 /* HTTPMethod.swift in Sources */,
 				6AA9774D2B00D38A00BB5A14 /* Game.swift in Sources */,
 				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
