@@ -85,7 +85,7 @@ final class DescriptionCell: BaseTableViewCell {
             descriptionLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
             readMoreButton.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 8),
-            readMoreButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            readMoreButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8),
             
             moreButton.topAnchor.constraint(equalTo: readMoreButton.bottomAnchor, constant: 20),
             moreButton.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),

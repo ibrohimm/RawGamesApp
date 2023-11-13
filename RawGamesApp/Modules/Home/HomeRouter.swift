@@ -19,6 +19,7 @@ final class HomeRouter: HomeRouterInput {
     
     func navigateToGameDetails(with id: Int) {
         let detailModule = DetailBuilder().build(withID: id)
+        detailModule.hidesBottomBarWhenPushed = true
         viewController?.navigationController?.pushViewController(detailModule, animated: true)
     }
 }

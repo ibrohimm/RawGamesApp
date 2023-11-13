@@ -31,6 +31,9 @@ final class DetailViewController: UIViewController, DetailViewInput {
     func reloadTableView() {
         tableView.reloadData()
     }
+    
+    // MARK: - Helper
+    
 }
 
 // MARK: -
@@ -73,10 +76,8 @@ extension DetailViewController {
         view.backgroundColor = .appColor(.primaryBackground)
         createTableView()
         
-        let ratingLabel = UILabel()
-        ratingLabel.text = "Favorite❤️🩶"
-        ratingLabel.textColor = .red
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: ratingLabel)
+        let favoriteButton = UIBarButtonItem(title: "Favorite", style: .plain, target: nil, action: nil)
+        navigationItem.rightBarButtonItem = favoriteButton
     }
     
     private func createTableView() {
