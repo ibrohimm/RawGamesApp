@@ -57,6 +57,7 @@
 		6AA977802B0159D500BB5A14 /* DetailMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA9777F2B0159D500BB5A14 /* DetailMapper.swift */; };
 		6AA977842B01D52D00BB5A14 /* DetailImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977832B01D52D00BB5A14 /* DetailImageCell.swift */; };
 		6AA977862B01D59900BB5A14 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977852B01D59900BB5A14 /* DescriptionCell.swift */; };
+		6AA977882B01D66E00BB5A14 /* DetailSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA977872B01D66E00BB5A14 /* DetailSections.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +114,7 @@
 		6AA9777F2B0159D500BB5A14 /* DetailMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapper.swift; sourceTree = "<group>"; };
 		6AA977832B01D52D00BB5A14 /* DetailImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCell.swift; sourceTree = "<group>"; };
 		6AA977852B01D59900BB5A14 /* DescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		6AA977872B01D66E00BB5A14 /* DetailSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSections.swift; sourceTree = "<group>"; };
 		943C095F8764F18EA0423D8D /* Pods-RawGamesApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RawGamesApp.debug.xcconfig"; path = "Target Support Files/Pods-RawGamesApp/Pods-RawGamesApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D03F0AFC9D803246109D092C /* Pods_RawGamesApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RawGamesApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				6AA9777F2B0159D500BB5A14 /* DetailMapper.swift */,
+				6AA977872B01D66E00BB5A14 /* DetailSections.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				6AA976E82AFCEC3200BB5A14 /* LocalizationHelper.swift in Sources */,
 				6AA977742B014A9900BB5A14 /* DetailProtocols.swift in Sources */,
 				6AA977492B00CC2400BB5A14 /* GameModel.swift in Sources */,
+				6AA977882B01D66E00BB5A14 /* DetailSections.swift in Sources */,
 				6AA977142AFE3C0A00BB5A14 /* AssetColors.swift in Sources */,
 				6AA9777E2B0153D700BB5A14 /* GameDetailModel.swift in Sources */,
 				6AA977222AFF8D8200BB5A14 /* HTTPMethod.swift in Sources */,
