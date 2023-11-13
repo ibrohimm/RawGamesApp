@@ -15,7 +15,7 @@ final class DetailInteractor: DetailInteractorInput {
     
     private var gameDetail: GameDetail? {
         didSet {
-            presenter?.updateFavoriteStatus(isGameFavorited(id: detailID))
+            updateIsGameFavorited()
         }
     }
     
@@ -67,7 +67,8 @@ final class DetailInteractor: DetailInteractorInput {
         presenter?.updateFavoriteStatus(!isFavorite)
     }
     
-    private func isGameFavorited(id: Int) -> Bool {
-        CoreDataManager.shared.isGameFavorited(id: id)
+    private func updateIsGameFavorited() {
+        let isFavorite = CoreDataManager.shared.isGameFavorited(id: detailID)
+        presenter?.updateFavoriteStatus(isFavorite)
     }
 }

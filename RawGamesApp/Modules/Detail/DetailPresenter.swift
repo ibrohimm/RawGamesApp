@@ -46,7 +46,7 @@ final class DetailPresenter: DetailViewOutput, DetailInteractorOutput {
     }
     
     func didFetchFailed(error: Error) {
-        
+        view?.displayError(message: error.localizedDescription)
     }
     
     func updateFavoriteStatus(_ isFavorite: Bool) {

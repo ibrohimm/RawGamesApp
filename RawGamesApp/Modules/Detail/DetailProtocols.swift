@@ -10,6 +10,7 @@
 // MARK: Input
 protocol DetailViewInput: AnyObject {
     func reloadTableView()
+    func displayError(message: String)
     func updateFavoriteState(isFavorited: Bool)
 }
 
