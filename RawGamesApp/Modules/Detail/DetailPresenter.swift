@@ -12,6 +12,7 @@ final class DetailPresenter: DetailViewOutput, DetailInteractorOutput {
     private let router: DetailRouterInput
     
     private var detailViewModel: DetailViewModel?
+    private var isFavorite: Bool = false
     
     // MARK: - Init
     
@@ -33,6 +34,10 @@ final class DetailPresenter: DetailViewOutput, DetailInteractorOutput {
         detailViewModel
     }
     
+    func toggleFavoriteState() {
+        interactor.toggleFavoriteStatus(isFavorite)
+    }
+    
     // MARK: - Interactor Output
     
     func didFetchDetail(with detail: GameDetail) {
@@ -42,5 +47,10 @@ final class DetailPresenter: DetailViewOutput, DetailInteractorOutput {
     
     func didFetchFailed(error: Error) {
         
+    }
+    
+    func updateFavoriteStatus(_ isFavorite: Bool) {
+        self.isFavorite = isFavorite
+        view?.updateFavoriteState(isFavorited: isFavorite)
     }
 }

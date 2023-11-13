@@ -32,8 +32,17 @@ final class DetailViewController: UIViewController, DetailViewInput {
         tableView.reloadData()
     }
     
+    func updateFavoriteState(isFavorited: Bool) {
+        let favoriteButton = UIBarButtonItem(title: isFavorited ? "Favorited♥️" : "Favorite🤍", style: .plain, target: self, action: #selector(favoriteButtonTapped))
+        favoriteButton.tintColor = isFavorited ? .red : .white
+        navigationItem.rightBarButtonItem = favoriteButton
+    }
+    
     // MARK: - Helper
     
+    @objc private func favoriteButtonTapped() {
+        presenter?.toggleFavoriteState()
+    }
 }
 
 // MARK: -
@@ -75,9 +84,6 @@ extension DetailViewController {
     private func setupUI() {
         view.backgroundColor = .appColor(.primaryBackground)
         createTableView()
-        
-        let favoriteButton = UIBarButtonItem(title: "Favorite", style: .plain, target: nil, action: nil)
-        navigationItem.rightBarButtonItem = favoriteButton
     }
     
     private func createTableView() {

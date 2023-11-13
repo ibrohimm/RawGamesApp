@@ -10,12 +10,14 @@
 // MARK: Input
 protocol DetailViewInput: AnyObject {
     func reloadTableView()
+    func updateFavoriteState(isFavorited: Bool)
 }
 
 // MARK: Output
 protocol DetailViewOutput: AnyObject {
     func viewDidLoad()
     func getDetailViewModel() -> DetailViewModel?
+    func toggleFavoriteState()
 }
 
 // MARK: - Interactor
@@ -23,13 +25,14 @@ protocol DetailViewOutput: AnyObject {
 // MARK: Input
 protocol DetailInteractorInput: AnyObject {
     func loadDetail()
-    
+    func toggleFavoriteStatus(_ isFavorite: Bool)
 }
 
 // MARK: Output
 protocol DetailInteractorOutput: AnyObject {
     func didFetchDetail(with detail: GameDetail)
     func didFetchFailed(error: Error)
+    func updateFavoriteStatus(_ isFavorite: Bool)
 }
 
 // MARK: - Router
