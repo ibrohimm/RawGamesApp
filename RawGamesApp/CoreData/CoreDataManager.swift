@@ -9,7 +9,7 @@ import CoreData
 
 private let modelName = "RawGamesApp"
 
-class CoreDataManager {
+final class CoreDataManager {
     static let shared = CoreDataManager()
     
     private lazy var persistentContainer: NSPersistentContainer = {
